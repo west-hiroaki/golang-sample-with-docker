@@ -1,10 +1,11 @@
 version: '3'
 services:
   app:
-    # Dockerfileの読み込み
-    build: .
     container_name: "app_go"
+    build:
+      context: .
+      dockerfile: Dockerfile
     tty: true
-    # ホストのディレクトリをコンテナにマウント
+    working_dir: /go/src/app
     volumes:
       - ./src:/go/src/app
