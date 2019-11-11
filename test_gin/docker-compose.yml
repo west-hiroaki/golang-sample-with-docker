@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    container_name: "app_test_gin"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    working_dir: /go
+    volumes:
+      - ./src:/go/src
+      - ./templates:/go/templates
+    environment:
+      - GOPATH=/go
+      - PORT=8080
+    ports:
+      - "8080:8080"

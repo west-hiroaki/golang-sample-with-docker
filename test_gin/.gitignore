@@ -1,0 +1,14 @@
+# build された go 実行ファイル
+main
+
+# sqlite3 データファイル
+test.sqlite3
+
+# go get したファイル達
+src/github.com/
+src/golang.org/
+src/gopkg.in/
+
+/bin/*
+
+/pkg/*
