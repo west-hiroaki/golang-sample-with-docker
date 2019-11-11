@@ -9,3 +9,5 @@ services:
     working_dir: /go
     volumes:
       - ./src:/go/src
+    environment:
+      - GOPATH=/go
