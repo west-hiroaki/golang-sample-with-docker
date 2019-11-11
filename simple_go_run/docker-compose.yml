@@ -1,11 +1,11 @@
 version: '3'
 services:
   app:
-    container_name: "app_go"
+    container_name: "app_simple_go_run"
     build:
       context: .
       dockerfile: Dockerfile
     tty: true
-    working_dir: /go/src/app
+    working_dir: /go
     volumes:
-      - ./src:/go/src/app
+      - ./src:/go/src

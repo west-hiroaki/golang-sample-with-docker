@@ -1,33 +1,26 @@
-# go ファイル達
+# Description
 
-## hello/main.go
+ホストの go ファイルを go run で実行するサンプル。
+[A Tour of Go - Exercise: Web Crawler](https://go-tour-jp.appspot.com/concurrency/10) に対する自分なりの回答。
 
-疎通テスト用。
-実行すると、Hello, World を print します。
+# Procedure
 
-## exercise_web_crawler/main.go
-
-A Tour of Go の問題に対する自分なりの回答。
-https://go-tour-jp.appspot.com/concurrency/10
-
-# 実行手順
-
-## コンテナ起動
+## コンテナ生成
 
 ```
 $ docker-compose build
-$ docker-compose up
-```
-
-## コンテナに入る
-
-```
-$ docker exec -it app_go bash
 ```
 
 ## go ファイル実行
 
 ```
-root@1dc8dc8b2169:/go/src/app# go run hello/main.go
-Hello, World
+$ docker-compose up
+Recreating app_simple_go_run ... done
+Attaching to app_simple_go_run
+app_simple_go_run | found: https://golang.org/ "The Go Programming Language"
+app_simple_go_run | not found: https://golang.org/cmd/
+app_simple_go_run | found: https://golang.org/pkg/ "Packages"
+app_simple_go_run | not found: https://golang.org/cmd/
+app_simple_go_run | found: https://golang.org/pkg/fmt/ "Package fmt"
+app_simple_go_run | found: https://golang.org/pkg/os/ "Package os"
 ```

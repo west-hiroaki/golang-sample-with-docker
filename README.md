@@ -10,7 +10,7 @@
 
 ## simple_go_run
 
-ホストの go ファイルをコンテナで参照。go run で実行するサンプル。
+ホストの go ファイルを go run で実行するサンプル。
 [A Tour of Go - Exercise: Web Crawler](https://go-tour-jp.appspot.com/concurrency/10) に対する自分なりの回答。
 
 ## test_gin
